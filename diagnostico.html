@@ -323,7 +323,35 @@
 <span>Receber meu diagnóstico</span>
 <span class="material-symbols-outlined">rocket_launch</span>
 </button>
+<div id="form-success" class="hidden text-center py-6">
+<span class="material-symbols-outlined text-5xl text-primary mb-4 block">check_circle</span>
+<p class="text-xl font-bold text-on-surface mb-2">Diagnóstico solicitado com sucesso!</p>
+<p class="text-on-surface-variant">Em breve entraremos em contato com sua análise personalizada.</p>
+</div>
 </form>
+<script>
+document.querySelector('form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.innerHTML = '<span>Enviando...</span>';
+  const res = await fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  });
+  if (res.ok) {
+    form.reset();
+    btn.classList.add('hidden');
+    document.getElementById('form-success').classList.remove('hidden');
+  } else {
+    btn.disabled = false;
+    btn.innerHTML = '<span>Receber meu diagnóstico</span><span class="material-symbols-outlined">rocket_launch</span>';
+    alert('Erro ao enviar. Tente novamente.');
+  }
+});
+</script>
 </div>
 </div>
 </section>
