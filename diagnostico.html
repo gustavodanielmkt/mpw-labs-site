@@ -195,7 +195,81 @@ Contato
 </div>
 <div class="brain-container flex justify-center items-center">
 <div class="brain-glow"></div>
-<img alt="AI Brain Visualization" class="brain-image w-full max-w-lg h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujpSOqmtTKCObK7fJKWQipnbrgeqkWBQcW83srZXDPKD5vPhIn7yFQ7Os7Klu4MvPDjukykHTJM15uQQzQ4VJm4aidBJz8VEnRhGvI5xlajAy0n6-FGM5fwiCwDdvLHOUW58rQSHq40YKI6gAXlqF1ps57nOwe1d4cOQ-xR8ghPlaOJ9KDSAflWrWpCru74rdqLWWYyD2WFfkrt9x-A4DzJ5Mhlml32pg2rEkIaco9SFbCtkcQ_zb-7GC1n"/>
+<svg class="brain-image w-full max-w-lg h-auto" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 30px rgba(0,210,255,0.25));">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(0,210,255,0.08)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="240" cy="240" r="220" fill="url(#bgGrad)"/>
+  <!-- Outer ring -->
+  <circle cx="240" cy="240" r="200" stroke="rgba(0,210,255,0.12)" stroke-width="1" stroke-dasharray="6 4"/>
+  <circle cx="240" cy="240" r="160" stroke="rgba(0,210,255,0.08)" stroke-width="1" stroke-dasharray="4 6"/>
+  <!-- Neural nodes -->
+  <g filter="url(#glow)">
+    <!-- Core -->
+    <circle cx="240" cy="240" r="18" fill="rgba(0,210,255,0.15)" stroke="rgba(0,210,255,0.8)" stroke-width="1.5">
+      <animate attributeName="r" values="18;22;18" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="240" cy="240" r="6" fill="rgba(0,210,255,1)"/>
+    <!-- Ring 1 nodes -->
+    <circle cx="240" cy="170" r="8" fill="rgba(0,210,255,0.9)" stroke="rgba(0,210,255,0.4)" stroke-width="1"><animate attributeName="opacity" values="0.6;1;0.6" dur="2.1s" repeatCount="indefinite"/></circle>
+    <circle cx="308" cy="205" r="8" fill="rgba(0,210,255,0.9)" stroke="rgba(0,210,255,0.4)" stroke-width="1"><animate attributeName="opacity" values="1;0.5;1" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="308" cy="275" r="8" fill="rgba(0,210,255,0.9)" stroke="rgba(0,210,255,0.4)" stroke-width="1"><animate attributeName="opacity" values="0.7;1;0.7" dur="1.9s" repeatCount="indefinite"/></circle>
+    <circle cx="240" cy="310" r="8" fill="rgba(0,210,255,0.9)" stroke="rgba(0,210,255,0.4)" stroke-width="1"><animate attributeName="opacity" values="1;0.6;1" dur="2.7s" repeatCount="indefinite"/></circle>
+    <circle cx="172" cy="275" r="8" fill="rgba(0,210,255,0.9)" stroke="rgba(0,210,255,0.4)" stroke-width="1"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="172" cy="205" r="8" fill="rgba(0,210,255,0.9)" stroke="rgba(0,210,255,0.4)" stroke-width="1"><animate attributeName="opacity" values="1;0.7;1" dur="2.6s" repeatCount="indefinite"/></circle>
+    <!-- Ring 2 nodes -->
+    <circle cx="240" cy="100" r="6" fill="rgba(0,210,255,0.7)" stroke="rgba(0,210,255,0.3)" stroke-width="1"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.1s" repeatCount="indefinite"/></circle>
+    <circle cx="360" cy="155" r="6" fill="rgba(0,210,255,0.7)" stroke="rgba(0,210,255,0.3)" stroke-width="1"><animate attributeName="opacity" values="1;0.4;1" dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="380" cy="240" r="6" fill="rgba(0,210,255,0.7)" stroke="rgba(0,210,255,0.3)" stroke-width="1"><animate attributeName="opacity" values="0.6;1;0.6" dur="3.3s" repeatCount="indefinite"/></circle>
+    <circle cx="360" cy="325" r="6" fill="rgba(0,210,255,0.7)" stroke="rgba(0,210,255,0.3)" stroke-width="1"><animate attributeName="opacity" values="1;0.5;1" dur="2.5s" repeatCount="indefinite"/></circle>
+    <circle cx="240" cy="380" r="6" fill="rgba(0,210,255,0.7)" stroke="rgba(0,210,255,0.3)" stroke-width="1"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="325" r="6" fill="rgba(0,210,255,0.7)" stroke="rgba(0,210,255,0.3)" stroke-width="1"><animate attributeName="opacity" values="1;0.6;1" dur="2.3s" repeatCount="indefinite"/></circle>
+    <circle cx="100" cy="240" r="6" fill="rgba(0,210,255,0.7)" stroke="rgba(0,210,255,0.3)" stroke-width="1"><animate attributeName="opacity" values="0.7;1;0.7" dur="2.9s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="155" r="6" fill="rgba(0,210,255,0.7)" stroke="rgba(0,210,255,0.3)" stroke-width="1"><animate attributeName="opacity" values="1;0.5;1" dur="3.4s" repeatCount="indefinite"/></circle>
+  </g>
+  <!-- Connections core to ring1 -->
+  <g stroke="rgba(0,210,255,0.35)" stroke-width="1">
+    <line x1="240" y1="240" x2="240" y2="170"/>
+    <line x1="240" y1="240" x2="308" y2="205"/>
+    <line x1="240" y1="240" x2="308" y2="275"/>
+    <line x1="240" y1="240" x2="240" y2="310"/>
+    <line x1="240" y1="240" x2="172" y2="275"/>
+    <line x1="240" y1="240" x2="172" y2="205"/>
+  </g>
+  <!-- Connections ring1 to ring2 -->
+  <g stroke="rgba(0,210,255,0.18)" stroke-width="0.8">
+    <line x1="240" y1="170" x2="240" y2="100"/>
+    <line x1="240" y1="170" x2="360" y2="155"/>
+    <line x1="308" y1="205" x2="360" y2="155"/>
+    <line x1="308" y1="205" x2="380" y2="240"/>
+    <line x1="308" y1="275" x2="380" y2="240"/>
+    <line x1="308" y1="275" x2="360" y2="325"/>
+    <line x1="240" y1="310" x2="360" y2="325"/>
+    <line x1="240" y1="310" x2="240" y2="380"/>
+    <line x1="172" y1="275" x2="240" y2="380"/>
+    <line x1="172" y1="275" x2="120" y2="325"/>
+    <line x1="172" y1="205" x2="120" y2="325"/>
+    <line x1="172" y1="205" x2="100" y2="240"/>
+    <line x1="172" y1="205" x2="120" y2="155"/>
+    <line x1="240" y1="170" x2="120" y2="155"/>
+    <line x1="100" y1="240" x2="120" y2="155"/>
+  </g>
+  <!-- Traveling pulse on one path -->
+  <circle r="3" fill="rgba(0,210,255,1)">
+    <animateMotion dur="3s" repeatCount="indefinite" path="M240,240 L240,170 L360,155 L380,240 L360,325 L240,310 L120,325 L100,240 L120,155 L240,170"/>
+  </circle>
+  <circle r="3" fill="rgba(255,255,255,0.8)">
+    <animateMotion dur="4.5s" repeatCount="indefinite" begin="1.5s" path="M240,240 L308,205 L380,240 L308,275 L240,310 L172,275 L100,240 L172,205 L240,240"/>
+  </circle>
+</svg>
 </div>
 </div>
 </section>
@@ -387,7 +461,48 @@ document.querySelector('form').addEventListener('submit', async function(e) {
 </div>
 <div class="w-full md:w-1/2 relative flex justify-center">
 <div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full"></div>
-<img alt="Future Vision" class="relative z-10 rounded-3xl shadow-2xl border border-outline-variant/10 max-w-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmlGN8uPZ1mC7xpEW_MH37k79fnGlFF-tiMK0IVVGquFau0SgwnDoAmVNBV5EY9z3ldPedfX6pyUG403g6m190cVpXXSEj_7r-r3wZaVm_BFdc6vd6b-MN0GRpPv8FLoiUFniKuJ3QRZIU4bHREi4JBPruTaAVfgfSkXnoc3lAhjbUWtjAGrn4_QjpJpQv9cjJ4SLOgEHyDead_2WJP3Y_6Ob24rWSUSlLOX1Ewlbtb8zxCOpjezbceJJUtPIExBk9ed9uNed-NDd2"/>
+<svg class="relative z-10 rounded-3xl w-full max-w-md h-80" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="border: 1px solid rgba(0,210,255,0.15); box-shadow: 0 25px 50px rgba(0,0,0,0.5); background: rgba(0,210,255,0.03);">
+  <defs>
+    <linearGradient id="barGrad1" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="rgba(0,210,255,0.3)"/><stop offset="100%" stop-color="rgba(0,210,255,0.9)"/></linearGradient>
+    <linearGradient id="barGrad2" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="rgba(100,200,255,0.2)"/><stop offset="100%" stop-color="rgba(100,200,255,0.6)"/></linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="rgba(0,210,255,0)"/><stop offset="50%" stop-color="rgba(0,210,255,1)"/><stop offset="100%" stop-color="rgba(0,210,255,0)"/></linearGradient>
+  </defs>
+  <!-- Grid lines -->
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <line x1="40" y1="60" x2="380" y2="60"/><line x1="40" y1="100" x2="380" y2="100"/>
+    <line x1="40" y1="140" x2="380" y2="140"/><line x1="40" y1="180" x2="380" y2="180"/>
+    <line x1="40" y1="220" x2="380" y2="220"/>
+  </g>
+  <!-- Bars -->
+  <rect x="60" y="160" width="30" height="60" rx="4" fill="url(#barGrad2)"><animate attributeName="height" from="0" to="60" dur="1s" fill="freeze"/><animate attributeName="y" from="220" to="160" dur="1s" fill="freeze"/></rect>
+  <rect x="110" y="120" width="30" height="100" rx="4" fill="url(#barGrad1)"><animate attributeName="height" from="0" to="100" dur="1.1s" fill="freeze"/><animate attributeName="y" from="220" to="120" dur="1.1s" fill="freeze"/></rect>
+  <rect x="160" y="90" width="30" height="130" rx="4" fill="url(#barGrad1)"><animate attributeName="height" from="0" to="130" dur="1.2s" fill="freeze"/><animate attributeName="y" from="220" to="90" dur="1.2s" fill="freeze"/></rect>
+  <rect x="210" y="70" width="30" height="150" rx="4" fill="url(#barGrad1)"><animate attributeName="height" from="0" to="150" dur="1.3s" fill="freeze"/><animate attributeName="y" from="220" to="70" dur="1.3s" fill="freeze"/></rect>
+  <rect x="260" y="50" width="30" height="170" rx="4" fill="url(#barGrad1)"><animate attributeName="height" from="0" to="170" dur="1.4s" fill="freeze"/><animate attributeName="y" from="220" to="50" dur="1.4s" fill="freeze"/></rect>
+  <rect x="310" y="80" width="30" height="140" rx="4" fill="url(#barGrad2)"><animate attributeName="height" from="0" to="140" dur="1.5s" fill="freeze"/><animate attributeName="y" from="220" to="80" dur="1.5s" fill="freeze"/></rect>
+  <!-- Trend line -->
+  <polyline points="75,165 125,125 175,95 225,75 275,55 325,85" stroke="rgba(0,210,255,0.9)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <animate attributeName="stroke-dasharray" from="0,600" to="600,0" dur="2s" fill="freeze"/>
+  </polyline>
+  <!-- Dots on line -->
+  <circle cx="75" cy="165" r="4" fill="rgba(0,210,255,1)"/><circle cx="125" cy="125" r="4" fill="rgba(0,210,255,1)"/>
+  <circle cx="175" cy="95" r="4" fill="rgba(0,210,255,1)"/><circle cx="225" cy="75" r="4" fill="rgba(0,210,255,1)"/>
+  <circle cx="275" cy="55" r="4" fill="rgba(0,210,255,1)"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite"/></circle>
+  <!-- Labels -->
+  <text x="40" y="255" fill="rgba(255,255,255,0.4)" font-size="10" font-family="monospace">Jan</text>
+  <text x="108" y="255" fill="rgba(255,255,255,0.4)" font-size="10" font-family="monospace">Fev</text>
+  <text x="158" y="255" fill="rgba(255,255,255,0.4)" font-size="10" font-family="monospace">Mar</text>
+  <text x="208" y="255" fill="rgba(255,255,255,0.4)" font-size="10" font-family="monospace">Abr</text>
+  <text x="258" y="255" fill="rgba(255,255,255,0.4)" font-size="10" font-family="monospace">Mai</text>
+  <text x="308" y="255" fill="rgba(255,255,255,0.4)" font-size="10" font-family="monospace">Jun</text>
+  <!-- Badge -->
+  <rect x="270" y="20" width="110" height="26" rx="13" fill="rgba(0,210,255,0.15)" stroke="rgba(0,210,255,0.4)" stroke-width="1"/>
+  <text x="283" y="37" fill="rgba(0,210,255,1)" font-size="11" font-family="monospace" font-weight="bold">↑ +68% ROI</text>
+  <!-- Scan line -->
+  <rect x="40" y="0" width="340" height="2" fill="url(#lineGrad)" opacity="0.6">
+    <animate attributeName="y" values="40;240;40" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</svg>
 </div>
 </div>
 </section>
